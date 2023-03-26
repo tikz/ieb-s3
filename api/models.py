@@ -13,3 +13,8 @@ class Product(models.Model):
 
     # Descripción (texto de longitud variable)
     description = models.TextField()
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["code"]),
+        ]
