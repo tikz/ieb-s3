@@ -15,8 +15,7 @@ python manage.py runserver
 python manage.py update_prices
 ```
 
-### Docker
+### Ejemplo instancia Docker
 ```
-docker pull ghcr.io/tikz/ieb-s3:main
 docker run -p 9090:80 ghcr.io/tikz/ieb-s3:main
 ```
