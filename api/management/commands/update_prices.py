@@ -2,7 +2,7 @@ import random
 import time
 from decimal import Decimal
 
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 
 from api.models import Product
 
@@ -21,4 +21,4 @@ class Command(BaseCommand):
                 multiplier_format = f"{(1-multiplier)*100:+.2f}"
                 new_prices = f"cost={product.cost:.2f} price={product.price:.2f}"
                 self.stderr.write(self.style.SUCCESS(f"Actualizado {product.code: <10} {multiplier_format}% \t {new_prices}"))
-            time.sleep(random.randint(1,5))
+            time.sleep(random.randint(1,3))
